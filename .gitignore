@@ -1,0 +1,6 @@
+# Ignore folder build
+build/
+# Ignore folder dist
+dist/
+*.class
+

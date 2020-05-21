@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<!--    <persistence-unit name="FTSPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>ve.org.bcv.fts.bean.FtsConfigArcVal</class>
+        <class>ve.org.bcv.fts.bean.FtsEstatusArc</class>
+        <class>ve.org.bcv.fts.bean.FtsArchivoRec</class>
+        <class>ve.org.bcv.fts.bean.FtsModulo</class>
+        <class>ve.org.bcv.fts.bean.FtsConfigJms</class>
+        <class>ve.org.bcv.fts.bean.FtsInstAutProMod</class>
+        <class>ve.org.bcv.fts.bean.FtsPropMod</class>
+        <class>ve.org.bcv.fts.bean.FtsHoraTransProMod</class>
+        <class>ve.org.bcv.fts.bean.FtsPropietario</class>
+        <class>ve.org.bcv.fts.bean.FtsTipoArchivo</class>
+        <class>ve.org.bcv.fts.bean.FtsEstatusPro</class>
+        <class>ve.org.bcv.fts.bean.FtsArcPro</class>
+        <class>ve.org.bcv.fts.bean.FtsErrorArcRec</class>
+        <class>ve.org.bcv.fts.bean.FtsInstAutorizada</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@(DESCRIPTION= (LOAD_BALANCE=on) (ADDRESS=(PROTOCOL=TCP)(HOST=cl-oradtbcv01)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orabdd01)))"/>
+            <property name="javax.persistence.jdbc.user" value="OFTS_POOL"/>
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="javax.persistence.jdbc.password" value="OFTS_POOL"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.exceptions" value="true"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+            <property name="eclipselink.weaving.changetracking" value="true"/>
+            <property name="eclipselink.weaving.lazy" value="true"/>
+            <property name="eclipselink.weaving.eager" value="true"/>
+            <property name="eclipselink.weaving.fetchgroups" value="true"/>
+            <property name="eclipselink.weaving.internal" value="false"/>
+        </properties>
+    </persistence-unit>-->
+    
+    <persistence-unit name="FTSPOOLPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>java:comp/env/jdbc/FtsDatasource</jta-data-source>
+        <class>ve.org.bcv.fts.bean.FtsConfigArcVal</class>
+        <class>ve.org.bcv.fts.bean.FtsEstatusArc</class>
+        <class>ve.org.bcv.fts.bean.FtsArchivoRec</class>
+        <class>ve.org.bcv.fts.bean.FtsModulo</class>
+        <class>ve.org.bcv.fts.bean.FtsConfigJms</class>
+        <class>ve.org.bcv.fts.bean.FtsInstAutProMod</class>
+        <class>ve.org.bcv.fts.bean.FtsPropMod</class>
+        <class>ve.org.bcv.fts.bean.FtsHoraTransProMod</class>
+        <class>ve.org.bcv.fts.bean.FtsPropietario</class>
+        <class>ve.org.bcv.fts.bean.FtsTipoArchivo</class>
+        <class>ve.org.bcv.fts.bean.FtsEstatusPro</class>
+        <class>ve.org.bcv.fts.bean.FtsArcPro</class>
+        <class>ve.org.bcv.fts.bean.FtsErrorArcRec</class>
+        <class>ve.org.bcv.fts.bean.FtsInstAutorizada</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.exceptions" value="true"/>
+            <property name="eclipselink.query-results-cache" value="false"/>
+            <property name="eclipselink.weaving.changetracking" value="true"/>
+            <property name="eclipselink.weaving.lazy" value="true"/>
+            <property name="eclipselink.weaving.eager" value="true"/>
+            <property name="eclipselink.weaving.fetchgroups" value="true"/>
+            <property name="eclipselink.weaving.internal" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
