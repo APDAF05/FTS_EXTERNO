@@ -30,7 +30,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(ve.org.bcv.fts.Services.service.FtsArchivoRecRESTFacade.class);
-        resources.add(ve.org.bcv.fts.Services.service.FtsAuthenticationFacadeREST.class);
+        resources.add(ve.org.bcv.fts.Services.service.FtsAuthenticationRESTFacade.class);
         resources.add(ve.org.bcv.fts.Services.service.FtsEstatusArcRESTFacade.class);
         resources.add(ve.org.bcv.fts.Services.service.FtsEstatusProRESTFacade.class);
         resources.add(ve.org.bcv.fts.Services.service.FtsInstAutorizadaRESTFacade.class);

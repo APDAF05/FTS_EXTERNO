@@ -19,6 +19,7 @@ import static javax.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
 import javax.ws.rs.core.Response;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ve.org.bcv.fts.autenticacion.Ldap;
 import ve.org.bcv.fts.bean.FtsTipoArchivo;
 import ve.org.bcv.fts.exception.ExceptionTreatment;
@@ -35,13 +36,13 @@ import ve.org.bcv.fts.util.SuccessfulMapper;
  * @author aandrade
  */
 @Path("/autenticacion")
-public class FtsAuthenticationFacadeREST {
+public class FtsAuthenticationRESTFacade {
 
     private Jwt tokenObject = new Jwt();
 
-    private org.apache.logging.log4j.Logger log = LogManager.getLogger(FtsAuthenticationFacadeREST.class.getName());
+    private Logger log = LogManager.getLogger(FtsAuthenticationRESTFacade.class.getName());
 
-    public FtsAuthenticationFacadeREST() {
+    public FtsAuthenticationRESTFacade() {
         super();
     }
 
